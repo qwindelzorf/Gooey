@@ -16,32 +16,22 @@ from gooey.gui import argparse_test_data
 
 
 class TestAdvancedConfigPanel(unittest.TestCase):
-  def setUp(self):
-    self.parser = argparse_test_data.parser
+    def setUp(self):
+        self.parser = argparse_test_data.parser
 
-  def buildWindow(self):
-    app = wx.PySimpleApp()
-    module_name = os.path.split(sys.argv[0])[-1]
-    frame = wx.Frame(None, -1, module_name, size=(640, 480))
+    def buildWindow(self):
+        app = wx.PySimpleApp()
+        module_name = os.path.split(sys.argv[0])[-1]
+        frame = wx.Frame(None, -1, module_name, size=(640, 480))
 
-    panel = advanced_config.AdvancedConfigPanel(frame, ClientApp(self.parser))
-    frame.Show()
-    app.MainLoop()
+        panel = advanced_config.AdvancedConfigPanel(frame, ClientApp(self.parser))
+        frame.Show()
+        app.MainLoop()
 
-  def testAdvancedConfigPanel(self):
-    self.buildWindow()
+    def testAdvancedConfigPanel(self):
+        self.buildWindow()
 
 
 if __name__ == "__main__":
-  #import sys;sys.argv = ['', 'Test.testName']
-  unittest.main()
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    # import sys;sys.argv = ['', 'Test.testName']
+    unittest.main()

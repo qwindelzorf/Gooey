@@ -7,12 +7,12 @@ import wx
 
 
 def ShowError(msg):
-  wx.MessageDialog(
-    None,
-    msg,
-    'Argument Error',
-    wx.ICON_ERROR)
+    wx.MessageDialog(
+        None,
+        msg,
+        'Argument Error',
+        wx.ICON_ERROR)
 
 
 if __name__ == '__main__':
-  pass
+    pass

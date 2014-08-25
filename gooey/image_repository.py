@@ -16,22 +16,14 @@ settings2 = os.path.join(image_dir, "settings2.png")
 
 
 def _list_images():
-  # convenience function to list all images
-  # the images directory in a format that can be copied
-  # and pasted
-  images = (f for f in os.listdir(image_dir))
-  stmnts = ('{0} = os.path.join(image_dir, "{1}")'
+    # convenience function to list all images
+    # the images directory in a format that can be copied
+    # and pasted
+    images = (f for f in os.listdir(image_dir))
+    stmnts = ('{0} = os.path.join(image_dir, "{1}")'
               .format(os.path.splitext(im)[0], im)
-            for im in images)
-  print '\n'.join(stmnts)
+              for im in images)
+    print('\n'.join(stmnts))
 
 
 _list_images()
-
-
-
-
-
-
-
-
